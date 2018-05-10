@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import random
 import MeCab
- 
+
 # MeCab使用してテキストデータを単語に分割する
 def wakati(text):
     t = MeCab.Tagger("-Owakati")
@@ -12,8 +12,8 @@ def wakati(text):
 if __name__ == "__main__":
     filename = "test.txt"
     src = open(filename, "r").read()
+
     wordlist = wakati(src)
- 
     # マルコフ連鎖用のテーブルを作成する
     markov = {}
     w1 = ""
@@ -40,9 +40,10 @@ if __name__ == "__main__":
         sentence += tmp
         w1, w2 = w2, tmp
         count += 1
- 
-    print(sentence)
 
-file = open('createtweet.txt', 'w')  #書き込みモードでオープン
+print(sentence)
+#create.txtに書き込み。無い場合は自動生成
+file = open('createtweet.txt', 'w')
 file.write(sentence)
+
 
