@@ -57,12 +57,11 @@ if __name__ == "__main__":
 		count += len(tmp)
 		if count > 140:
 			sentence = sentence[:-len(tmp)]
-	print(len(sentence))
 	while count2 < 140:
 		if sentence[-1:] != "。":
 			sentence = sentence[:-1]
 			count2 += 1
 		else:
 			break
-	print(len(sentence))
+	print("この文章は" + str(len(sentence)) + "文字です")
 	print(sentence)
