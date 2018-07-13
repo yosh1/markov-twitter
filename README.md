@@ -1,4 +1,1 @@
-# Python3-MarkovChainMakeText
-AIによる文章生成プログラムです。
-# Description
-MeCabによる形態素解析でテキストデータを前処理し、マルコフ連鎖により文章を分岐させています。
+README

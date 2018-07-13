@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119305276-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-119305276-1');
+
+</script>
+
+<style>
+    html,
+    body,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    form,
+    input,
+    div {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    @font-face {
+        font-family: "Let's go Digital";
+        src: url("font/Let_s_go_Digital/Let_s_go_Digital_Regular.ttf") format("truetype");
+    }
+
+
+
+    body {
+        font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+        background-size: cover;
+        background-color: rgba(0, 0, 0);
+    }
+
+    header {
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0);
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .mail {
+        width: 204px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-family: "Let's go Digital";
+        box-shadow: 2px 2px #444444;
+    }
+
+    .mail a:link {
+        color: rgb(255, 255, 120);
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 40px;
+    }
+
+    .mail:hover {
+        background-color: rgba(255, 255, 120, 0.4);
+        color: black;
+    }
+
+    .mail:active {
+        position: fixed;
+        top: 22px;
+        right: 18px;
+        box-shadow: none;
+    }
+
+    .mail_text {
+
+        padding-top: 2px;
+        padding-left: 6px;
+    }
+
+    .header_logo img {
+        width: 17%;
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .main {
+        width: 100%;
+        height: 100vh;
+        background-image: url("img/AI_image.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    .main_overlay {
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .countdown_wrapper {
+        padding-top: 10%;
+    }
+
+    .countdown {
+        height: 12vh;
+        width: 40vw;
+        margin-left: 12%;
+        color: rgb(255, 255, 120)
+    }
+
+    #count_output {
+        font-family: "Let's go Digital";
+        font-size: 120px;
+        text-align: center;
+    }
+
+    .message {
+        height: 40vh;
+        width: 40vw;
+        margin-left: 12%;
+    }
+
+    footer {
+        width: 100%;
+        height: 0px;
+        background-color: rgba(0, 0, 0, 0);
+        position: fixed;
+        right: 4px;
+        bottom: 34px;
+    }
+
+    .footer_text {
+        font-family: Roboto, sans-serif;
+        font-size: 10px;
+        transform: scale(0.8);
+        color: #7c7c7c;
+        float: right;
+    }
+
+    .message {
+        color: white
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 40px;
+        font-family: fantasy;
+
+    }
+
+    .body {
+        color: lightgray;
+        font-style: italic;
+    }
+
+    .theta .btn {
+        display: inline-block;
+        margin: 6px;
+        font-size: inherit;
+        line-height: 1.42;
+        padding: 0.7em 1.4em;
+        font-weight: normal;
+        border-width: 3px;
+        border-style: solid;
+        background: transparent;
+        border-radius: 0;
+        cursor: pointer;
+        font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
+        user-select: none;
+        vertical-align: bottom;
+        position: relative;
+        transform: translate(0.5em -0.4em);
+        transition: transform 0.2s
+    }
+
+    .mail :before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        transform: translate(0.6em, -0.3em);
+        transition: transform 0.2s, background-color 0.2s
+    }
+
+    .mail {
+        color: #52C11F;
+        border-color: #52C11F
+    }
+
+    .mail:hover {
+        transform: translate(0.2em, -0.1em)
+    }
+
+    .mail:hover:before {
+        transform: translate(-0.4em, 0.4em)
+    }
+
+    .mail:active {
+        transform: translate(0, 0);
+        transition-duration: 0.1s
+    }
+
+    .mail:active:before {
+        transition-duration: 0.1s;
+        transform: translate(0, 0);
+        background-color: rgba(31, 193, 142, 0.5)
+    }
+
+    .mail:before {
+        background-color: rgba(31, 193, 142, 0.4)
+    }
+
+
+    @media(max-width: 768px) {
+
+
+        .body {
+            font-size: 20px;
+        }
+        header {
+            height: 15vh;
+        }
+
+        .header_logo img {
+            width: 28%;
+        }
+
+        .countdown_wrapper {
+            /* padding-top: 27vh;*/
+        }
+
+        .countdown {
+            width: 60vw;
+            margin-left: 8%;
+        }
+
+        .message {
+            width: 60vw;
+            margin-left: 8%;
+        }
+
+
+        .mail {
+            width: 104px;
+            /*background-color: rgb(255, 255, 120);*/
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-family: "Let's go Digital";
+            box-shadow: 2px 2px #444444;
+        }
+
+        .mail a:link {
+            color: rgba(255, 255, 120, 0.6);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 20px;
+            text-align: right
+        }
+
+        .mail:hover {
+            background-color: rgba(255, 255, 120, 0.6);
+        }
+
+        .mail:active {
+            position: fixed;
+            top: 22px;
+            right: 18px;
+            box-shadow: none;
+        }
+
+        .mail_text {
+            padding-top: 2px;
+            padding-left: 6px;
+        }
+
+
+    }
+
+    /*------  ここまでタブレット用CSS  ------*/
+
+    /*------  ここからスマートフォン用CSS  ------*/
+
+    @media(max-width: 480px) {
+
+        .body {
+            font-size: 10px;
+        }
+        header {
+            height: 50px;
+        }
+
+        .header_logo img {
+            width: 48%;
+            padding-top: 12px;
+        }
+
+        .countdown_wrapper {
+            padding-top: 30%;
+        }
+
+        .countdown {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        #count_output {
+            font-size: 45px;
+        }
+
+        .message {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .footer_text {
+            width: 100%;
+            text-align: center;
+        }
+
+        .mail {
+            width: 104px;
+            /*background-color: rgb(255, 255, 120);*/
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-family: "Let's go Digital";
+            box-shadow: 2px 2px #444444;
+        }
+
+        .mail a:link {
+            color: rgba(255, 255, 120, 0.6);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 20px;
+            text-align: right
+        }
+
+        .mail:hover {
+            background-color: rgba(255, 255, 120, 0.6);
+            color: black;
+        }
+
+        .mail:active {
+            position: fixed;
+            top: 22px;
+            right: 18px;
+            box-shadow: none;
+        }
+
+        .mail_text {
+
+            padding-top: 2px;
+            padding-left: 6px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 10px;
+        }
+
+        .title {
+            font-size: 20px;
+        }
+
+
+
+    }
+
+    input[type="text"] {
+        width: 377px;
+        height: 36px;
+        background: #eee;
+        border: 1px solid #bebebe;
+        font-size: 1em;
+        text-indent: 0.7em;
+        align-content: center;
+    }
+
+    input[type="text"]:focus {
+        background: #edf4ff;
+        border: 1px solid #4881d9;
+        align-content: center;
+    }
+
+    form {
+        align-self: auto;
+    }
+
+</style>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>AI × Twitter = !?</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="AI × Twitter = !?">
+    <meta name="keywords" content="AI,Twitter,人工知能,機械学習,ツイート,BOT,カウントダウン">
+    <link rel="stylesheet" href="responsive.css">
+    <script type="text/javascript" src="date_counter.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="mail">
+                <a href="mailto:developer@sky-ward.co.jp?subject=&body=">
+                    <div class="mail_text">
+                        CONTACT US
+                    </div>
+                </a>
+            </div>
+            <div class="header_logo">
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main_overlay">
+            <div class="countdown_wrapper">
+                <div class="countdown">
+                    <div class="container" style="margin:0 auto; text-align: center;">
+                        <form action="/" method="post" style="margin:0 auto;">
+                            <input name="userid" class="text" type="text" style="margin:0 auto;" placeholder="TwitterのIDを入力してください 例:skyward0515">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="message">
+                <div class="container">
+                    <div class="message_text">
+                        <p class="title">AI × Twitter = !?
+                        </p><br>
+                        <p class="body">
+                            仮想は仮想。
+                            <br>決して現実であってはいけない
+                            <br><br>ー 誰もが等しく英雄になるチャンスを与えられた世界 ー
+                            <br>国籍・人種・貧富・ルックス・・・<br>そのあらゆる生まれ持った条件を無視し、<br>皆が等しくチャンスを持つことのできる世界。<br> それがインターネット。
+                            <br>誰もが自由に発信でき、それを誰もが見ることができる。<br>一人の発言が世論までもを変えることが出来る。
+                            <br>それがネットの強さ、そして怖さ。
+                            <br><br> そんな荒ぶる時代に生きる人類は常に最新を求め、生み出してきた。
+                            <br>そしてこれからも生き続けねばならない。</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer_text">
+                <a href="https://twitter.com/share" class="twitter-share-button" style="align-content: center" data-url="URL" data-text="{{mark}}" data-via="skyward0515" data-hashtags="#AIxTwitter #SKYWARD #AI">Tweet</a>
+                <script>
+                    ! function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0],
+                            p = /^http:/.test(d.location) ? 'http' : 'https';
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = p + '://platform.twitter.com/widgets.js';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, 'script', 'twitter-wjs');
+
+                </script>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FAI-Twitter--167731063897844%2F&width=130&layout=button_count&action=like&size=small&show_faces=false&share=true&height=46&appId" width="130" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

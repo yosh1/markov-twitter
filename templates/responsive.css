@@ -1,0 +1,155 @@
+@media(max-width: 768px) {
+
+
+    .body {
+        font-size: 20px;
+    }
+    header {
+        height: 15vh;
+    }
+
+    .header_logo img {
+        width: 28%;
+    }
+
+    .countdown_wrapper {
+        /* padding-top: 27vh;*/
+    }
+
+    .countdown {
+        width: 60vw;
+        margin-left: 8%;
+    }
+
+    .message {
+        width: 60vw;
+        margin-left: 8%;
+    }
+
+
+    .mail {
+        width: 104px;
+        /*background-color: rgb(255, 255, 120);*/
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-family: "Let's go Digital";
+        box-shadow: 2px 2px #444444;
+    }
+
+    .mail a:link {
+        color: rgba(255, 255, 120, 0.6);
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: right
+    }
+
+    .mail:hover {
+        background-color: rgba(255, 255, 120, 0.6);
+    }
+
+    .mail:active {
+        position: fixed;
+        top: 22px;
+        right: 18px;
+        box-shadow: none;
+    }
+
+    .mail_text {
+        padding-top: 2px;
+        padding-left: 6px;
+    }
+
+
+}
+
+/*------  ここまでタブレット用CSS  ------*/
+
+/*------  ここからスマートフォン用CSS  ------*/
+
+@media(max-width: 480px) {
+
+    .body {
+        font-size: 10px;
+    }
+    header {
+        height: 50px;
+    }
+
+    .header_logo img {
+        width: 48%;
+        padding-top: 12px;
+    }
+
+    .countdown_wrapper {
+        padding-top: 30%;
+    }
+
+    .countdown {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #count_output {
+        font-size: 45px;
+    }
+
+    .message {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .footer_text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mail {
+        width: 104px;
+        /*background-color: rgb(255, 255, 120);*/
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-family: "Let's go Digital";
+        box-shadow: 2px 2px #444444;
+    }
+
+    .mail a:link {
+        color: rgba(255, 255, 120, 0.6);
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: right
+    }
+
+    .mail:hover {
+        background-color: rgba(255, 255, 120, 0.6);
+        color: black;
+    }
+
+    .mail:active {
+        position: fixed;
+        top: 22px;
+        right: 18px;
+        box-shadow: none;
+    }
+
+    .mail_text {
+
+        padding-top: 2px;
+        padding-left: 6px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+
+
+}
